@@ -13,6 +13,24 @@ public class playercounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 newPos = transform.position;
+
+        if (Input.Getkey(KeyCode.D))
+        {
+            newPos.x++;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            newPos.x--;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            newPos.y--;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            newPos.y++;
+        }
+        transform.position = newPos;
     }
 }
